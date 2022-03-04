@@ -3,6 +3,12 @@ const TestComponent=(props)=>{
 const [msg,setMsg]=useState(props.msg)
 const [count,setCount]=useState(props.count)
 const [toggle,setToggle]=useState(false)
+const [state,setState]=useState({
+    fname:"john",
+    yoe:8
+})
+//setState({fname:"peter"})
+//setState({yoe:10})
 const [tech,setTech]=useState([
     {
         techname:"react",
