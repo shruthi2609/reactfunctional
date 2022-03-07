@@ -1,4 +1,4 @@
-import { useState,useRef } from "react"
+import { useState,useRef,useEffect } from "react"
 
 const FormComponent=()=>{
    /* const [uname,setUsername]=useState("")
@@ -8,6 +8,15 @@ const FormComponent=()=>{
         password:""
     })
     const userRef=useRef()
+    useEffect(()=>{
+      console.log("inside useeffect")
+     return ()=>console.log("unmounting")
+    },[])
+    useEffect(()=>{
+        console.log("inside useeffect")
+       return ()=>console.log("unmounting")
+      },[])
+
    const handleChange=(e)=>{
    const {name,value}=e.target
     setUserData({...userdata,[name]:value})
@@ -17,9 +26,9 @@ const FormComponent=()=>{
         console.log(userdata)
         console.log(userRef.current.value)
     }
-
     return(
         <div>
+            {console.log("render")}
             <form onSubmit={handleSubmit}>
             <input type="text" placeholder="username" 
             name="uname" onChange={handleChange}></input>
