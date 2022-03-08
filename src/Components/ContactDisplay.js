@@ -12,7 +12,7 @@ const ContactDisplay =(props)=>{
     }
     const getContacts=useMemo(()=>{
         console.log("inside get contacts")
-        const arr=props.contact.filter((item)=>item.name===searchText)
+        const arr=[...props.contact.filter((item)=>item.name===searchText)]
         return arr
     },[props.contact,searchText])
     return(
