@@ -19,6 +19,7 @@ const ContactDisplay =(props)=>{
         <div>
             {}
             {console.log("inside contact display")}
+            
             <form>
             <input type="text" placeholder="enter name" onChange={(e)=>handleChange(e)}></input>
            <button onClick={(e)=>handleSearch(e)}>search</button>
@@ -36,4 +37,4 @@ const ContactDisplay =(props)=>{
         </div>
     )
 }
-export default React.memo(ContactDisplay)
+export default ContactDisplay
