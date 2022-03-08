@@ -1,17 +1,17 @@
 import { useEffect,useState } from "react";
-import { ChildComponent } from "./ChildComponent";
+import  ChildComponent  from "./ChildComponent";
 const EffectHook=()=>{
     const [msg,setMsg]=useState("")
     const [count,setCount]=useState(0)
     //end point 1 -> product name
     // end point 2 -> username 
-    useEffect(
+   /*   useEffect(
         ()=>{
             console.log("useeffect of parent")
      //   return ()=>{console.log("unmounting")}
         }
      ,[msg])
-  /*  useEffect(
+  useEffect(
         ()=>{
             console.log("count changed")
         }
