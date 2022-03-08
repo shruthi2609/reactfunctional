@@ -15,6 +15,7 @@ const ContactDisplay =(props)=>{
         const arr=[...props.contact.filter((item)=>item.name===searchText)]
         return arr
     },[props.contact,searchText])
+    
     return(
         <div>
             {}
