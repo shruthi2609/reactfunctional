@@ -6,6 +6,7 @@ export const ContextUpdate=()=>{
         ()=>({userName,setUserName})
     ,[userName])
     return(
+        
         <UserContext.Provider value={value}>
             <UpdateUserName></UpdateUserName>
          <DisplayInfo></DisplayInfo>
@@ -25,13 +26,13 @@ const UpdateUserName=()=>{
     }
     return(
         <div>
-            {console.log("state",text)}
+            {console.log("component 1")}
             <h1>Update Username</h1>
             <form onSubmit={(e)=>handleSubmit(e)}>
             <input type="text" onChange={(e)=>handleChange(e)}></input>
             <input type="submit" ></input>
             </form>
-            {console.log(text)}
+      
 
         </div>
     )
@@ -43,6 +44,7 @@ const DisplayInfo=()=>{
     }
     return(
         <div>
+            {console.log("component 2")}
             <h1>{userName}</h1>
             <button onClick={changeUsername}>change</button>
         </div>

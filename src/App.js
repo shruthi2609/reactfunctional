@@ -11,6 +11,7 @@ import RootComponent from "./Components/RootComponent"
 import ContextComponent from "./Components/ContextComponent";
 import {ContextUpdate} from "./Components/UpdateContext"
 import { Parent } from "./Components/FunctionalComponent";
+import {User} from "./Components/RefComponentTwo"
 const handleAPI=async (text)=>{
     console.log(text)
    const res=await axios.get("https://hn.algolia.com/api/v1/search?query="+text)
@@ -21,8 +22,9 @@ const App=()=>{
         <div>
         
 {/*<TestComponent msg="final" count={0}></TestComponent>
-<ContextUpdate></ContextUpdate>*/}
-<Parent></Parent>
+<Parent></Parent>*/}
+<User></User>
+
         </div>
     )
 }
