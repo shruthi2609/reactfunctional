@@ -9,6 +9,8 @@ import Stopwatch from "./Components/Counter";
 import ContactBook from "./Components/ContactBook"
 import RootComponent from "./Components/RootComponent"
 import ContextComponent from "./Components/ContextComponent";
+import {ContextUpdate} from "./Components/UpdateContext"
+import { Parent } from "./Components/FunctionalComponent";
 const handleAPI=async (text)=>{
     console.log(text)
    const res=await axios.get("https://hn.algolia.com/api/v1/search?query="+text)
@@ -18,8 +20,9 @@ const App=()=>{
     return(
         <div>
         
-{/*<TestComponent msg="final" count={0}></TestComponent>*/}
-<ContextComponent></ContextComponent>
+{/*<TestComponent msg="final" count={0}></TestComponent>
+<ContextUpdate></ContextUpdate>*/}
+<Parent></Parent>
         </div>
     )
 }
